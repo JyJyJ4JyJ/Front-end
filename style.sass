@@ -1,0 +1,291 @@
+body
+    margin: 0
+
+div,
+ul,
+navigation,
+section,
+h2,
+h5
+    display: block
+    position: relative
+
+a
+    text-decoration: none
+
+.site-header 
+    background-color: #3b3d42
+
+.header
+    @extend .site-header 
+    max-width: 1200px
+    padding-top: 15px
+    padding-bottom: 15px
+    margin-left: auto
+    margin-right: auto
+    padding-left: 0.9375rem
+    padding-right: 0.9375rem
+    height: 60px
+
+.header-content
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-left: -0.9375rem
+    margin-right: -0.9375rem
+
+.logo
+    margin-left: 0.9375rem
+    margin-right: 0.9375rem
+
+.logo_image
+    height: auto
+    cursor: pointer
+
+.navigation
+    @extend .logo 
+    font-style: normal
+    font-weight: 400
+    font-size: 14px
+    line-height: 1.4
+    font-family: Roboto, sans-serif
+    letter-spacing: 0px
+    text-align: left
+
+.menu-item
+    display: inline-block
+    list-style: none
+    padding: 3px 3px 2px
+    margin-left: 0
+
+    a 
+        color: #fff
+        font-size: 17px
+        line-height: 15px
+        font-size: 17px
+        font-weight: 400
+        letter-spacing: 1.2px
+        transition: all .3s ease-out
+
+        &:hover
+            color: #f7992b
+        
+    
+
+#home-button 
+    color: #f7992b
+
+.site-content 
+    &:before,
+    &:after 
+        content: ""
+        display: table
+        table-layout: fixed
+    
+
+    &:after
+        clear: both
+    
+
+=wrap()
+    display: flex
+    flex-wrap: wrap
+    align-content: flex-start
+
+.banner 
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("slide-1.jpg")
+    background-position: center center
+    background-size: cover
+    padding: 0px 15px 0px 15px
+
+.banner-container
+    max-width: 1200px
+    min-height: 100vh
+    align-items: center
+    display: flex
+    margin-right: auto
+    margin-left: auto
+
+.banner-content
+    +wrap()
+    text-align: center
+
+.wbtf,
+.bbb,
+.vm-container,
+.wcatir,
+.ac 
+    width: 100%
+
+.wbtf
+    margin: 55px 0px 10px 0px
+
+.wbtf-text 
+    color: #fff
+    font-family: "Oswald", Sans-serif
+    text-transform: uppercase
+    font-weight: 700
+    font-size: 80px
+    font-style: normal
+    text-decoration: none
+    line-height: 90px
+    letter-spacing: 4px
+    margin: 0
+
+.bbb
+    @extend .wbtf-text 
+    font-size: 38px
+    font-weight: 300
+    text-transform: none
+    line-height: 42px
+    letter-spacing: 1.4px
+
+    &:after 
+        content: ""
+        clear: both
+        width: 0
+        height: 0
+    
+
+.vm 
+    margin: 50px 0px 0px 0px
+
+.vm-button
+    @extend .wbtf-text
+    font-size: 14px
+    line-height: 1.714em
+    letter-spacing: 8.4px
+    background-color: #f7992b
+    border-radius: 0px 0px 0px 0px
+    padding: 18px 38px 18px 47px
+    border-style: solid
+    border-width: 1px 1px 1px 1px
+    border-color: #f7992b
+    width: auto
+    box-shadow: none
+    transition: all .5s
+
+    &:hover 
+        background: transparent
+        color: #f7992b
+    
+
+.hidden 
+    opacity: 0
+
+.animated-one 
+    animation-duration: 1.25s
+    animation-name: fadeInLeft
+
+.animated-two
+    @extend .animated-one 
+    animation-name: fadeInRight
+
+.animated-three
+    @extend .animated-one 
+    animation-duration: 2s
+
+@keyframes fadeInLeft 
+    0% 
+        opacity: 0
+        transform: translate3d(-100%,0,0)
+    
+
+    100% 
+        opacity: 1
+        transform: none
+    
+
+@keyframes fadeInRight 
+    0% 
+        opacity: 0
+        transform: translate3d(100%,0,0)
+    
+
+    100% 
+        opacity: 1
+        transform: none
+    
+
+.about
+    padding: 73px 0px 49px 0px
+
+.about-content
+    max-width: 1060px
+    display: flex
+    margin-right: auto
+    margin-left: auto
+
+.wcatir-container
+    width: 39.515%
+    display: flex
+
+.wcatir 
+    +wrap()
+    padding: 0px 15px 0px 45px
+
+.ac 
+    margin-bottom: 0px
+
+.ac-text 
+    color: #000
+    font-style: normal
+    font-family: "Oswald", Sans-serif
+    font-size: 14px
+    font-weight: 300
+    text-transform: uppercase
+    line-height: 1.285em
+    letter-spacing: 1.4px
+    margin-block-start: 1.67em
+    margin-block-end: 1.67em
+
+.wcatir-content
+    margin: 20px 0px 18px 0px
+
+.wcatir-text
+    @extend .ac-text
+    font-size: 48px
+    font-weight: 700
+    line-height: 1.125em
+    letter-spacing: 2.4px
+    margin-block-start: 0.83em
+    margin-block-end: 0.83em
+
+.line-container
+    padding-top: 15px
+    padding-bottom: 15px
+
+.line 
+    border-top-style: solid
+    border-top-width: 4px
+    border-top-color: #F7992B
+    width: 70px
+    display: inline-block
+
+.about-text 
+    +wrap()
+    width: 60.485%
+    padding: 36px 15px 0px 27px
+
+.about-text-first-p 
+    font-style: normal
+    color: #000000
+    font-family: "Montserrat", Sans-serif
+    font-size: 14px
+    font-weight: 550
+    line-height: 2.143em
+    margin-bottom: 20px
+
+    &:after 
+        content: ""
+        clear: both
+        width: 0
+        height: 0
+    
+
+p 
+    margin: 0 0 1em
+
+.about-text-second-p
+    @extend .about-text-first-p 
+    font-weight: 300
